@@ -175,6 +175,20 @@ main {
   padding-bottom: 60px;
 }
 
+a {
+  color: #FAFAFA;
+  text-decoration: none;
+  background-color: #753BBD;
+  padding: 0 3px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+a:hover {
+  background-color: #fafafa;
+  color: #753BBD;
+}
+
 .wraptor {
   max-width: 700px;
   display: -webkit-box;
@@ -194,8 +208,13 @@ main {
           align-items: center;
 }
 
+.resultWraptor {
+  max-width: 900px;
+}
+
 .wraptor,
-.subWraptor {
+.subWraptor,
+.resultWraptor {
   margin: 0 auto;
   width: 80%;
 }
@@ -281,10 +300,14 @@ input {
   display: block;
 }
 
-fieldset {
+fieldset,
+.biography {
   border: 3px solid #753BBD;
   -webkit-box-shadow: 10px 10px  #BA0C2F;
           box-shadow: 10px 10px  #BA0C2F;
+}
+
+fieldset {
   margin-top: 60px;
 }
 
@@ -333,7 +356,11 @@ h2 {
 }
 
 h2:first-of-type {
-  margin-top: 60px;
+  margin-top: 30px;
+}
+
+h2:last-of-type {
+  margin-bottom: 30px;
 }
 
 h3 {
@@ -357,8 +384,56 @@ button {
 }
 
 button:hover {
-  border: 4px solid #ba0c2f;
+  border: 7px solid #ba0c2f;
   border-radius: 10px;
+}
+
+.result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  margin-top: 60px;
+}
+
+.result .imageContainer {
+  border: 3px solid #753BBD;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 75%;
+  width: calc(35% - 15px);
+  margin-right: 30px;
+}
+
+.result .imageContainer img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.result .imagePascal img {
+  -o-object-position: 25%;
+     object-position: 25%;
+}
+
+.result .biography {
+  width: calc(65% - 15px);
+  margin-left: 35%;
 }
 
 footer,
@@ -374,5 +449,9 @@ footer p {
   margin: 0;
   text-align: center;
   color: white;
+}
+
+footer .socialIcons i {
+  color: #FAFAFA;
 }
 /*# sourceMappingURL=style.css.map */

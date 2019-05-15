@@ -7,14 +7,30 @@ main {
     padding-top: 60px;
     padding-bottom: 60px;
 }
-
+a {
+    color: #FAFAFA;
+    text-decoration: none;
+    // border: 1px solid #151717;
+    background-color: #753BBD;
+    padding: 0 3px;
+    transition: all 0.3s;
+    &:hover {   
+        background-color: #fafafa;
+        color: #753BBD;
+    }
+}
 .wraptor { 
     max-width: 700px;
     @include flex(column, nowrap, flex-start, center);
 }
 
+.resultWraptor {
+    max-width: 900px;
+}
+
 .wraptor,
-.subWraptor {
+.subWraptor,
+.resultWraptor {
     margin: 0 auto;
     width: 80%;
 }
