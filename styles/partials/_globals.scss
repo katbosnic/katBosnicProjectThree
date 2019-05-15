@@ -1,0 +1,68 @@
+html {
+    font-size: 62.5%;
+}
+
+.wraptor { 
+    max-width: 1280px;
+}
+
+.wraptor,
+.subWraptor {
+    margin: 0 auto;
+    width: 80%;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1.8rem;
+}
+
+body,
+h1,
+h3,
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: black;
+    font-size: 8rem;
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 3px 3px #753BBD;
+}
+
+h3,
+input {
+    display: block;
+}
+
+fieldset {
+    border: 2px solid #753BBD;
+    box-shadow: 10px 10px  #BA0C2F;
+    margin-top: 60px;
+}
+
+input {
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 2.4rem;
+    background-color: #753BBD;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    position: relative;
+    height: 50vh;
+    background-color: #BA0C2F;
+    @include flex(row, nowrap, center, center);
+
+}
