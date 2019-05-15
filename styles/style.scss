@@ -49,6 +49,10 @@ input {
     display: block;
 }
 
+form {
+    @include flex (column, nowrap, flex-start, center);
+}
+
 fieldset,
 .biography {
     border: 3px solid #753BBD;
@@ -57,6 +61,7 @@ fieldset,
 
 fieldset {
     margin-top: 60px;
+    width: 100%;
     .formRow {
         margin-top: 20px;
         &:last-of-type {
@@ -110,7 +115,6 @@ button {
     &:hover {
         border: 7px solid rgba(186,12,47,1);
         border-radius: 10px;
-        // margin-top: 70px;
     }
 }
 
@@ -140,6 +144,11 @@ button {
         width: calc(65% - 15px);
         margin-left: 35%;
     }
+    display: none;
+}
+
+.displayResult {
+    display: block;
 }
 
 footer,
@@ -152,12 +161,6 @@ footer {
     p {
         margin: 0;
         text-align: center;
-        color: white;
-    }
-
-    .socialIcons {
-        i {
-            color: #FAFAFA;
-        }
+        color: #fafafa;
     }
 }
