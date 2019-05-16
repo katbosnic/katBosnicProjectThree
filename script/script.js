@@ -3,49 +3,39 @@ const handleSubmit = () => {
         // prevent default behaviour of submit button
         event.preventDefault();
 
-        // get values from quiz and convert them to integers
-        const answerOneValue = parseInt($('input[name=question1]:checked').val());
+        // get values from radio inputs
+        const scores = $('input[type=radio]:checked');
+        // create an empty array
+        const userScoreArray = [];
+        // place scores in the array
+        scores.each(function (index) {
+            const scoreString = $(this).val();
+            userScoreArray.push(parseInt(scoreString));
+        });
+        // calculate the sum of all scores
+        const scoreSum = userScoreArray.reduce((total, scoreValue) => {
+            return total + scoreValue;
+        });
+        playerMatchup(scoreSum);
 
-        const answerTwoValue = parseInt($('input[name=question2]:checked').val());
-
-        const answerThreeValue = parseInt($('input[name=question3]:checked').val());
-
-        const answerFourValue = parseInt($('input[name=question4]:checked').val());
-
-        const answerFiveValue = parseInt($('input[name=question5]:checked').val());
-
-        calcUserScore(answerOneValue, answerTwoValue, answerThreeValue, answerFourValue, answerFiveValue);
     })
 }
 
-// calculate the user's score
-const calcUserScore = (one, two, three, four, five) => {
-    const total = one + two + three + four + five;
-    playerMatchup(total);
-
-}
-
 // match the score with the players
-const playerMatchup = (total) => {
-    if (total < 4) {
-        $('.quiz').addClass('hidden');
+const playerMatchup = (totalScore) => {
+    $('.quiz').addClass('hidden');
+    if (totalScore < 4) {
         $('.resultDug').addClass('displayResult');
-    } else if (total >= 4 && total < 8) {
-        $('.quiz').addClass('hidden');
+    } else if (totalScore >= 4 && totalScore < 8) {
         $('.resultFred').addClass('displayResult')
-    } else if (total >= 8 && total < 12) {
-        $('.quiz').addClass('hidden');
+    } else if (totalScore >= 8 && totalScore < 12) {
         $('.resultKyle').addClass('displayResult')
-    } else if (total >= 12 && total < 16) {
-        $('.quiz').addClass('hidden');
+    } else if (totalScore >= 12 && totalScore < 16) {
         $('.resultKawhi').addClass('displayResult')
-    } else if (total >= 16) {
-        $('.quiz').addClass('hidden');
+    } else if (totalScore >= 16) {
         $('.resultPascal').addClass('displayResult')
     }
-
 }
-
 
 
 $(document).ready(function () {
