@@ -424,14 +424,15 @@ button:hover {
       -ms-flex-align: start;
           align-items: flex-start;
   position: relative;
-  margin-top: 60px;
+  margin-top: 30px;
+  margin-bottom: 60px;
   display: none;
 }
 
 .result .imageContainer {
   border: 3px solid #753BBD;
   position: absolute;
-  top: 0;
+  top: 85px;
   left: 0;
   bottom: 0;
   right: 75%;
@@ -458,6 +459,10 @@ button:hover {
 
 .displayResult {
   display: block;
+}
+
+.hidden {
+  display: none;
 }
 
 footer,

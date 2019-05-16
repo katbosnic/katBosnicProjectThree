@@ -121,11 +121,12 @@ button {
 .result {
     @include flex(row, wrap, center, flex-start);
     position: relative;
-    margin-top: 60px;
+    margin-top: 30px;
+    margin-bottom: 60px;
     .imageContainer {
         border: 3px solid #753BBD;
         position: absolute;
-        top: 0;
+        top: 85px;
         left: 0;
         bottom: 0;
         right: 75%;
@@ -147,8 +148,13 @@ button {
     display: none;
 }
 
+
 .displayResult {
     display: block;
+}
+
+.hidden {
+    display: none;
 }
 
 footer,
