@@ -24,6 +24,7 @@ const handleSubmit = () => {
 // match the score with the players
 const playerMatchup = (totalScore) => {
     $('.quiz').addClass('hidden');
+    $('.bottomHeader').addClass('hidden');
     if (totalScore < 4) {
         $('.resultDug').addClass('displayResult');
     } else if (totalScore >= 4 && totalScore < 8) {
@@ -37,7 +38,14 @@ const playerMatchup = (totalScore) => {
     }
 }
 
+const smoothScroll = () => {
+    $('a').smoothScroll({
+        offset: 0,
+        speed: 700,
+    });
+}
 
 $(document).ready(function () {
     handleSubmit();
+    smoothScroll();
 });

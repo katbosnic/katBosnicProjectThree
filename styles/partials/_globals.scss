@@ -7,10 +7,23 @@ main {
     padding-top: 60px;
     padding-bottom: 60px;
 }
+
 a {
-    color: #FAFAFA;
     text-decoration: none;
-    // border: 1px solid #151717;
+    
+    transition: all 0.3s;
+}
+
+.bottomHeader a {
+    font-size: 6rem;
+    color: #151717;
+    text-shadow: 0px 5px #753BBD;
+}
+
+
+
+footer a {
+    color: #FAFAFA;
     background-color: #753BBD;
     padding: 0 3px;
     transition: all 0.3s;
@@ -19,6 +32,7 @@ a {
         color: #753BBD;
     }
 }
+
 .wraptor { 
     max-width: 700px;
     @include flex(column, nowrap, flex-start, center);
