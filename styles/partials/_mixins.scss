@@ -5,3 +5,23 @@
 	justify-content: $justify;
 	align-items: $align;
 }
+
+@mixin for980 {
+	@media (max-width: 980px) { @content; }
+}
+
+@mixin for870 {
+	@media (max-width: 870px) { @content; }
+}
+
+@mixin for740 {
+	@media (max-width: 740px) { @content; }
+}
+
+@mixin for550 {
+	@media (max-width: 550px) { @content; }
+}
+
+@mixin for410 {
+	@media (max-width: 410px) { @content; }
+}

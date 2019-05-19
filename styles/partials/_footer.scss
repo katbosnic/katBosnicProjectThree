@@ -1,0 +1,10 @@
+footer a {
+    color: #FAFAFA;
+    background-color: #753BBD;
+    padding: 0 3px;
+    transition: all 0.3s;
+    &:hover {   
+        background-color: #fafafa;
+        color: #753BBD;
+    }
+}

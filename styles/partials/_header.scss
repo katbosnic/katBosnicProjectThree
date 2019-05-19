@@ -1,0 +1,104 @@
+
+.topHeader {
+    height: 60vh;
+    @include flex(row, nowrap, center, center);
+    position: relative;
+
+    img {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    } 
+}
+
+.bottomHeader {
+    height: 40vh;
+    @include for740 {
+        height: 60vh;
+    }
+
+    a {
+        position: relative;
+        top: 0;
+        font-size: 6rem;
+        color: #151717;
+        text-shadow: 0px 5px #753BBD;
+        transition: all 0.3s;
+        &:hover {
+            text-shadow: 0px 0px #753BBD;
+            position: relative;
+            top: 5px;
+        }
+    }
+}
+
+.svgDesktop {
+    @include for980 {
+    right: 0;
+    width: 140%;
+    }
+    @include for740 {
+    display: none;
+    }
+}
+.svgTablet {
+    display: none;
+    @include for740 {
+    display: block;
+    width: 160%;
+    right: 0;
+    }
+    @include for550 {
+    width: 230%;
+    }
+    @include for410 {
+    width: 300%;
+    }
+}
+
+
+h1, 
+.titleContainer span {
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 3px 3px #753BBD;
+    color: #151717;
+}
+
+.titleContainer,
+.result h2 {
+    font-family: 'Electrolize', sans-serif;
+    span {
+    font-size: 5rem;
+    }
+}
+
+h1 {
+    font-size: 10rem;
+    z-index: 2;
+    @include for980 {
+        font-size: 8rem;
+    }
+    @include for550 {
+        font-size: 6rem;
+    }
+}
+
+.bottomTriangle {
+    width: 0;
+    height: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: 55vh solid #FAFAFA; 
+    position: absolute;
+    top: 0;
+}
+.topTriangle {
+    width: 0;
+    height: 0;
+    border-left: 20vw solid transparent;
+    border-right: 20vw solid transparent;
+    border-top: 20vh solid #BA0C2F; 
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}

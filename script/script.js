@@ -17,7 +17,8 @@ const handleSubmit = () => {
             return total + scoreValue;
         });
         playerMatchup(scoreSum);
-
+        // adjust scroll position when result pops up
+        $('html, body').animate({ scrollTop: 500 }, '0');
     })
 }
 

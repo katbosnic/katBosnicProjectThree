@@ -194,25 +194,6 @@ a {
   transition: all 0.3s;
 }
 
-.bottomHeader a {
-  font-size: 6rem;
-  color: #151717;
-  text-shadow: 0px 5px #753BBD;
-}
-
-footer a {
-  color: #FAFAFA;
-  background-color: #753BBD;
-  padding: 0 3px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-footer a:hover {
-  background-color: #fafafa;
-  color: #753BBD;
-}
-
 .wraptor {
   max-width: 700px;
   display: -webkit-box;
@@ -263,6 +244,12 @@ fieldset {
   padding: 0;
 }
 
+h3,
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
 .topHeader {
   height: 60vh;
   display: -webkit-box;
@@ -286,10 +273,70 @@ fieldset {
 .topHeader img {
   position: absolute;
   bottom: 0;
+  z-index: 1;
 }
 
 .bottomHeader {
   height: 40vh;
+}
+
+@media (max-width: 740px) {
+  .bottomHeader {
+    height: 60vh;
+  }
+}
+
+.bottomHeader a {
+  position: relative;
+  top: 0;
+  font-size: 6rem;
+  color: #151717;
+  text-shadow: 0px 5px #753BBD;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.bottomHeader a:hover {
+  text-shadow: 0px 0px #753BBD;
+  position: relative;
+  top: 5px;
+}
+
+@media (max-width: 980px) {
+  .svgDesktop {
+    right: 0;
+    width: 140%;
+  }
+}
+
+@media (max-width: 740px) {
+  .svgDesktop {
+    display: none;
+  }
+}
+
+.svgTablet {
+  display: none;
+}
+
+@media (max-width: 740px) {
+  .svgTablet {
+    display: block;
+    width: 160%;
+    right: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .svgTablet {
+    width: 230%;
+  }
+}
+
+@media (max-width: 410px) {
+  .svgTablet {
+    width: 300%;
+  }
 }
 
 h1,
@@ -299,17 +346,31 @@ h1,
   color: #151717;
 }
 
-.titleContainer {
+.titleContainer,
+.result h2 {
   font-family: 'Electrolize', sans-serif;
 }
 
-.titleContainer span {
+.titleContainer span,
+.result h2 span {
   font-size: 5rem;
 }
 
 h1 {
   font-size: 10rem;
   z-index: 2;
+}
+
+@media (max-width: 980px) {
+  h1 {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 6rem;
+  }
 }
 
 .bottomTriangle {
@@ -331,6 +392,19 @@ h1 {
   position: absolute;
   top: 0;
   z-index: 1;
+}
+
+footer a {
+  color: #FAFAFA;
+  background-color: #753BBD;
+  padding: 0 3px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+footer a:hover {
+  background-color: #fafafa;
+  color: #753BBD;
 }
 
 h3,
@@ -397,12 +471,6 @@ fieldset .formRow:first-of-type {
 
 fieldset input {
   margin-right: 15px;
-}
-
-h3,
-h2 {
-  font-size: 3rem;
-  text-align: center;
 }
 
 h2 {
@@ -479,7 +547,7 @@ button:hover,
 .result .imageContainer {
   border: 3px solid #753BBD;
   position: absolute;
-  top: 115px;
+  top: 108px;
   left: 0;
   bottom: 130px;
   right: 75%;
