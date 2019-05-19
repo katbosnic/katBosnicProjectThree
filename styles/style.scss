@@ -4,10 +4,7 @@
 @import './partials/header';
 @import './partials/footer';
 
-h3,
-input {
-    display: block;
-}
+
 
 form {
     @include flex (column, nowrap, flex-start, center);
@@ -48,6 +45,9 @@ h2 {
         margin-bottom: 10px;
     }
     font-size: 4rem;
+    @include for550 {
+        font-size: 3.5rem;
+    }
 }
 
 h3 {
@@ -63,6 +63,13 @@ button {
     font-family: 'Electrolize', sans-serif;
     font-size: 3rem;
     font-weight: bold;
+    @include for740 {
+        padding: 20px 30px;
+        font-size: 2.8rem;
+    }
+    @include for550 {
+        padding: 10px 20px;
+    }
 }
 
 button,
@@ -75,13 +82,13 @@ button,
         border: 7px solid rgba(186,12,47,1);
         border-radius: 10px;
     }
+    font-weight: bold;
 }
 
 .result {
     h2 {
         margin-bottom: 60px;
     }
-    @include flex(row, wrap, center, flex-start);
     position: relative;
     margin-top: 30px;
     margin-bottom: 60px;
@@ -99,12 +106,35 @@ button,
             width: 100%;
             height: 100%;
         }
+
+        @include for870 {
+            position: static;
+            width: 70%;
+            margin-right: 0;
+            box-shadow: 10px 11px #BA0C2F;
+        }
+        @include for740 {
+            width: 90%;
+        }
+        @include for550 {
+            width: 100%;
+        }
     }
     .imagePascal img {
         object-position: 25%;
     }
     .biography {
         margin-left: 35%;
+        @include for870 {
+            margin-left: 0;
+            width: 70%;
+        }
+        @include for740 {
+            width: 90%;
+        }
+        @include for550 {
+            width: 100%;
+        }
     }
     display: none;
     .linkContainer {
@@ -113,9 +143,10 @@ button,
         a {
             background-color: #753BBD;
             color: #FAFAFA;
-            font-size: 2rem;
+            font-size: 3rem;
             font-family: 'Electrolize', sans-serif;
             padding: 15px 25px;
+            text-align: center;
         }
     }
 }
@@ -123,29 +154,13 @@ button,
 
 .displayResult {
     display: block;
+    @include for870 {
+        @include flex(column, nowrap, flex-start, center);
+    }
 }
 
 .hidden {
     display: none;
 }
 
-footer,
-.topHeader {
-    background-color: #BA0C2F;
-}
 
-footer {
-    padding: 20px;
-    p {
-        margin: 0;
-        text-align: center;
-        color: #fafafa;
-        font-family: 'Electrolize', sans-serif;
-        &:first-of-type {
-            margin-bottom: 10px;
-        }
-        &:last-of-type {
-            font-size: 1.6rem;
-        }
-    }
-}

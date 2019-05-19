@@ -25,3 +25,7 @@
 @mixin for410 {
 	@media (max-width: 410px) { @content; }
 }
+
+@mixin for350 {
+	@media (max-width: 350px) { @content; }
+}

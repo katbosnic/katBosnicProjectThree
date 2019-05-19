@@ -1,10 +1,26 @@
-footer a {
-    color: #FAFAFA;
-    background-color: #753BBD;
-    padding: 0 3px;
-    transition: all 0.3s;
-    &:hover {   
-        background-color: #fafafa;
-        color: #753BBD;
+
+footer {
+    padding: 20px;
+    p {
+        margin: 0;
+        text-align: center;
+        color: #fafafa;
+        font-family: 'Electrolize', sans-serif;
+        &:first-of-type {
+            margin-bottom: 10px;
+        }
+        &:last-of-type {
+            font-size: 1.6rem;
+        }
+    }
+    a {
+        color: #FAFAFA;
+        background-color: #753BBD;
+        padding: 0 3px;
+        transition: all 0.3s;
+        &:hover {   
+            background-color: #fafafa;
+            color: #753BBD;
+        }
     }
 }

@@ -6,6 +6,9 @@ html {
 main {
     padding-top: 60px;
     padding-bottom: 60px;
+    @include for550 {
+        padding-top: 0;
+    }
 }
 
 a {
@@ -27,6 +30,13 @@ a {
 .resultWraptor {
     margin: 0 auto;
     width: 80%;
+}
+
+.wraptor,
+.resultWraptor {
+    @include for550 {
+        width: 90%;
+    }
 }
 
 ul,
@@ -51,6 +61,19 @@ fieldset {
 
 h3,
 h2 {
+    text-align: center; 
     font-size: 3rem;
-    text-align: center;   
+    @include for550 {
+        font-size: 2.8rem;
+    }
+}
+
+h3,
+input {
+    display: block;
+}
+
+footer,
+.topHeader {
+    background-color: #BA0C2F;
 }

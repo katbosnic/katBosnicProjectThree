@@ -12,11 +12,6 @@
 }
 
 .bottomHeader {
-    height: 40vh;
-    @include for740 {
-        height: 60vh;
-    }
-
     a {
         position: relative;
         top: 0;
@@ -68,7 +63,10 @@ h1,
 .result h2 {
     font-family: 'Electrolize', sans-serif;
     span {
-    font-size: 5rem;
+        font-size: 5rem;
+        @include for550 {
+            font-size: 4rem;
+        }
     }
 }
 
@@ -80,6 +78,9 @@ h1 {
     }
     @include for550 {
         font-size: 6rem;
+    }
+    @include for350 {
+        font-size: 5.5rem;
     }
 }
 
