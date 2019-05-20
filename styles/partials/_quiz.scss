@@ -1,0 +1,195 @@
+h2 {
+    color: #BA0C2F;
+    font-style: bold;
+    text-shadow: 2px 2px 1px #151717;
+    &:first-of-type {
+        margin-top: 50px;
+    }
+    &:last-of-type{
+        margin-bottom: 10px;
+    }
+    font-size: 4rem;
+    @include for550 {
+        font-size: 3.5rem;
+    }
+}
+
+h3 {
+    font-family: 'Electrolize', sans-serif;
+    background-color: #753BBD;
+    padding: 20px;
+    color: #fafafa;
+}
+
+button {
+    margin-top: 60px;
+    padding: 30px 40px;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    @include for740 {
+        padding: 20px 30px;
+        font-size: 2.8rem;
+    }
+    @include for550 {
+        padding: 10px 20px;
+    }
+}
+
+button,
+.linkContainer a {
+    background: #753BBD;
+    color: #fafafa;
+    border: 7px solid rgba(186,12,47,0);
+    transition: all 0.3s;
+    &:hover {
+        border: 7px solid rgba(186,12,47,1);
+        border-radius: 10px;
+    }
+    font-weight: bold;
+    &:focus {
+        border: 5px dotted #151717;
+    }
+}
+
+form {
+    @include flex (column, nowrap, flex-start, center); 
+}
+
+fieldset,
+.biography {
+    border: 3px solid #753BBD;
+    box-shadow: 10px 10px  #BA0C2F;
+}
+
+fieldset {
+    margin-top: 60px;
+    width: 100%;
+    .formRow {
+        margin-top: 20px;
+        &:last-of-type {
+            margin-bottom: 40px;
+        }
+        &:first-of-type {
+            margin-top: 40px;
+        }
+        position: relative;
+        padding-left: 40px;
+    }
+    input {
+        margin-right: 15px;
+        position: absolute;
+        top: 0;
+        left: -999px;
+        &:checked + label::after {
+        background: #BA0C2F;
+        }
+        &:focus + label::before{
+            border: 3px dotted #BA0C2F;
+        }
+    }
+    label {
+        width: 60%;
+        &::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid #BA0C2F;
+            background-color: #FAFAFA;
+            position: absolute;
+            top: calc(50% - 10px);
+            left: 0;
+        }
+        &::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #FAFAFA;
+            position: absolute;
+            top: calc(50% - 2px);
+            left: 8px;
+        }
+        
+    }
+}
+
+.result {
+    h2 {
+        margin-bottom: 60px;
+    }
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    .imageContainer {
+        border: 3px solid #753BBD;
+        position: absolute;
+        top: 108px;
+        left: 0;
+        bottom: 130px;
+        right: 75%;
+        width: calc(35% - 15px);
+        margin-right: 30px;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        @include for870 {
+            position: static;
+            width: 70%;
+            margin-right: 0;
+            box-shadow: 10px 11px #BA0C2F;
+        }
+        @include for740 {
+            width: 90%;
+        }
+        @include for550 {
+            width: 100%;
+        }
+    }
+    .imagePascal img {
+        object-position: 25%;
+    }
+    .biography {
+        margin-left: 35%;
+        @include for870 {
+            margin-left: 0;
+            width: 70%;
+        }
+        @include for740 {
+            width: 90%;
+        }
+        @include for550 {
+            width: 100%;
+        }
+    }
+    display: none;
+    .linkContainer {
+        margin-top: 60px;
+        @include flex(row, wrap, space-between, center);
+        a {
+            background-color: #753BBD;
+            color: #FAFAFA;
+            font-size: 3rem;
+            font-family: 'Electrolize', sans-serif;
+            padding: 15px 25px;
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+.displayResult {
+    display: block;
+    @include for870 {
+        @include flex(column, nowrap, flex-start, center);
+    }
+}
+
+.hidden {
+    display: none;
+}

@@ -1,3 +1,5 @@
+
+
 const handleSubmit = () => {
     $('form').on('submit', function (event) {
         // prevent default behaviour of submit button
@@ -5,6 +7,7 @@ const handleSubmit = () => {
 
         // get values from radio inputs
         const scores = $('input[type=radio]:checked');
+
         // create an empty array
         const userScoreArray = [];
         // place scores in the array
@@ -12,6 +15,7 @@ const handleSubmit = () => {
             const scoreString = $(this).val();
             userScoreArray.push(parseInt(scoreString));
         });
+
         // calculate the sum of all scores
         const scoreSum = userScoreArray.reduce((total, scoreValue) => {
             return total + scoreValue;

@@ -459,67 +459,6 @@ footer a:hover {
   color: #753BBD;
 }
 
-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-fieldset,
-.biography {
-  border: 3px solid #753BBD;
-  -webkit-box-shadow: 10px 10px  #BA0C2F;
-          box-shadow: 10px 10px  #BA0C2F;
-}
-
-fieldset {
-  margin-top: 60px;
-  width: 100%;
-}
-
-fieldset .formRow {
-  margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-fieldset .formRow:last-of-type {
-  margin-bottom: 40px;
-}
-
-fieldset .formRow:first-of-type {
-  margin-top: 40px;
-}
-
-fieldset input {
-  margin-right: 15px;
-}
-
 h2 {
   color: #BA0C2F;
   font-style: bold;
@@ -583,6 +522,97 @@ button:hover,
 .linkContainer a:hover {
   border: 7px solid #ba0c2f;
   border-radius: 10px;
+}
+
+button:focus,
+.linkContainer a:focus {
+  border: 5px dotted #151717;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+fieldset,
+.biography {
+  border: 3px solid #753BBD;
+  -webkit-box-shadow: 10px 10px  #BA0C2F;
+          box-shadow: 10px 10px  #BA0C2F;
+}
+
+fieldset {
+  margin-top: 60px;
+  width: 100%;
+}
+
+fieldset .formRow {
+  margin-top: 20px;
+  position: relative;
+  padding-left: 40px;
+}
+
+fieldset .formRow:last-of-type {
+  margin-bottom: 40px;
+}
+
+fieldset .formRow:first-of-type {
+  margin-top: 40px;
+}
+
+fieldset input {
+  margin-right: 15px;
+  position: absolute;
+  top: 0;
+  left: -999px;
+}
+
+fieldset input:checked + label::after {
+  background: #BA0C2F;
+}
+
+fieldset input:focus + label::before {
+  border: 3px dotted #BA0C2F;
+}
+
+fieldset label {
+  width: 60%;
+}
+
+fieldset label::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid #BA0C2F;
+  background-color: #FAFAFA;
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 0;
+}
+
+fieldset label::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #FAFAFA;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 8px;
 }
 
 .result {
@@ -690,6 +720,7 @@ button:hover,
   font-family: 'Electrolize', sans-serif;
   padding: 15px 25px;
   text-align: center;
+  margin: 0 auto;
 }
 
 .displayResult {
