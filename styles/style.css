@@ -576,8 +576,9 @@ fieldset .formRow:first-of-type {
 fieldset input {
   margin-right: 15px;
   position: absolute;
-  top: 0;
-  left: -999px;
+  top: 3px;
+  left: 0px;
+  opacity: 0;
 }
 
 fieldset input:checked + label::after {

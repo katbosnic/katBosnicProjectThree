@@ -1,5 +1,4 @@
-
-
+// on submit run this...
 const handleSubmit = () => {
     $('form').on('submit', function (event) {
         // prevent default behaviour of submit button
@@ -15,6 +14,8 @@ const handleSubmit = () => {
             const scoreString = $(this).val();
             userScoreArray.push(parseInt(scoreString));
         });
+
+
 
         // calculate the sum of all scores
         const scoreSum = userScoreArray.reduce((total, scoreValue) => {
@@ -43,6 +44,7 @@ const playerMatchup = (totalScore) => {
     }
 }
 
+// smooth scroll
 const smoothScroll = () => {
     $('a').smoothScroll({
         offset: 0,

@@ -36,6 +36,7 @@ button {
     }
 }
 
+// submit button and go back to home page button
 button,
 .linkContainer a {
     background: #753BBD;
@@ -79,8 +80,10 @@ fieldset {
     input {
         margin-right: 15px;
         position: absolute;
-        top: 0;
-        left: -999px;
+        top: 3px;
+        left: 0px;
+        // kept the input here and put opacity at 0 so that alerts would come up beside the label
+        opacity: 0;
         &:checked + label::after {
         background: #BA0C2F;
         }
@@ -90,6 +93,7 @@ fieldset {
     }
     label {
         width: 60%;
+        // custom inputs
         &::before {
             content: "";
             width: 20px;
