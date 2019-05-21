@@ -280,6 +280,10 @@ footer,
   background-color: #BA0C2F;
 }
 
+img {
+  display: block;
+}
+
 .topHeader {
   height: 60vh;
   display: -webkit-box;
